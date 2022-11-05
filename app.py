@@ -14,9 +14,9 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-	filename = "https://raw.githubusercontent.com/mabidnadzif/analisis_santimen/main/review_tanpa_preprocessing.csv"
+	filename = "https://raw.githubusercontent.com/SelgiAgilsa/uts-textminning/main/review_hotel.csv"
 	df = pd.read_csv(filename)
-	df.drop(columns=['rumah sakit semarang', 'name'], inplace=True)
+	df.drop(columns=['hotel_name', 'name'], inplace=True)
 
 	import string
 	import re
